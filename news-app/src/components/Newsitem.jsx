@@ -9,7 +9,7 @@ class Newsitem extends Component {
         let {title, description, imageurl, newsUrl} = this.props;
         return (
             <div>
-                <div className="card" style={{width: "18rem"}}>
+                <div className="card">
                     <img src={!imageurl?"https://www.newsclick.in/sites/default/files/2023-05/Human%20genome.jpg":imageurl} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title">{title}...</h5>
