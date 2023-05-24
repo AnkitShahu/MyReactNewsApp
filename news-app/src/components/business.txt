@@ -1,0 +1,13 @@
+business
+environment
+gernal
+health
+science
+sports
+technology
+
+
+  {/* <div className='my-5 d-flex justify-content-evenly'>
+            <button disabled={this.state.page <= 1 } type="button" className="btn btn-dark" onClick={this.handlepre}> &larr; Pervios</button>
+            <button disabled={this.state.page +1 > Math.ceil(this.state.totalResults/this.props.pageSize)}type="button" className ="btn btn-dark" onClick={this.handlenext}>Next &rarr;</button>
+           </div> */}
