@@ -137,23 +137,22 @@ async componentDidMount(){
           next={this.fetchMoreData}
           hasMore={this.state.articles.length !== this.totalResults}
           loader={<Loading />}
-        >
+        ><div className='row'>
             {!this.state.loading && this.state.articles.map((element)=>{
                 return <div className='col-md-4' key = {element.url}>
-                <Newsitem title= {element.title?element.title.slice(0, 45):""} description = {element.description?element.description.slice(0, 88):""} imageurl={element.urlToImage}  newsUrl= {element.url} author={element.author} date={element.publishedAt} source={element.source.name}/>
+                <Newsitem title= {element.title?element.title.slice(0, 45):""} description = {element.description?element.description.slice(0, 88):""} imageurl={element.urlToImage}  newsUrl= {element.url} author={element.author} date={element.publishedAt} source={element.source.name}/></div>
             })}
+            </div>
             </InfiniteScroll>
-{/* 
+            {/* 
            <div className='my-5 d-flex justify-content-evenly'>
             <button disabled={this.state.page <= 1 } type="button" className="btn btn-dark" onClick={this.handlepre}> &larr; Pervios</button>
             <button disabled={this.state.page +1 > Math.ceil(this.state.totalResults/this.props.pageSize)}type="button" className ="btn btn-dark" onClick={this.handlenext}>Next &rarr;</button>
            </div> */}
-                   </div>
+                   
             </div>
         );
     }
 }
-
-
 
 export default News;
